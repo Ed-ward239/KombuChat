@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD6F74BC281DF860007F39C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD6F74BB281DF860007F39C2 /* FirebaseAuth */; };
+		CD6F74BE281DF860007F39C2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD6F74BD281DF860007F39C2 /* FirebaseFirestore */; };
+		CD6F74C0281DF995007F39C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD6F74BF281DF995007F39C2 /* GoogleService-Info.plist */; };
+		CD6F74C2281DFEF9007F39C2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6F74C1281DFEF9007F39C2 /* ListView.swift */; };
+		CD6F74C4281DFF6C007F39C2 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6F74C3281DFF6C007F39C2 /* Users.swift */; };
+		CDE426B727E521CF00A45069 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE426B627E521CF00A45069 /* Tests_iOS.swift */; };
+		CDE426B927E521CF00A45069 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE426B827E521CF00A45069 /* Tests_iOSLaunchTests.swift */; };
+		CDE426C327E521CF00A45069 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE426C227E521CF00A45069 /* Tests_macOS.swift */; };
+		CDE426C527E521CF00A45069 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE426C427E521CF00A45069 /* Tests_macOSLaunchTests.swift */; };
+		CDE426C627E521CF00A45069 /* KombuChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4269E27E521CA00A45069 /* KombuChat.swift */; };
+		CDE426C827E521CF00A45069 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4269F27E521CA00A45069 /* ContentView.swift */; };
+		CDE426CA27E521CF00A45069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE426A027E521CF00A45069 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDE426B327E521CF00A45069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDE4269927E521CA00A45069 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDE426A427E521CF00A45069;
+			remoteInfo = "BC Connect (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD6F74BF281DF995007F39C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD6F74C1281DFEF9007F39C2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		CD6F74C3281DFF6C007F39C2 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		CDE4269E27E521CA00A45069 /* KombuChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KombuChat.swift; sourceTree = "<group>"; };
+		CDE4269F27E521CA00A45069 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDE426A027E521CF00A45069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDE426A527E521CF00A45069 /* KombuChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KombuChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE426AD27E521CF00A45069 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CDE426B227E521CF00A45069 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE426B627E521CF00A45069 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		CDE426B827E521CF00A45069 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		CDE426BE27E521CF00A45069 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE426C227E521CF00A45069 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		CDE426C427E521CF00A45069 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDE426A227E521CF00A45069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6F74BC281DF860007F39C2 /* FirebaseAuth in Frameworks */,
+				CD6F74BE281DF860007F39C2 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426AF27E521CF00A45069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426BB27E521CF00A45069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDE4269827E521CA00A45069 = {
+			isa = PBXGroup;
+			children = (
+				CDE4269D27E521CA00A45069 /* Shared */,
+				CDE426AC27E521CF00A45069 /* macOS */,
+				CDE426B527E521CF00A45069 /* Tests iOS */,
+				CDE426C127E521CF00A45069 /* Tests macOS */,
+				CDE426A627E521CF00A45069 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDE4269D27E521CA00A45069 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4269E27E521CA00A45069 /* KombuChat.swift */,
+				CDE4269F27E521CA00A45069 /* ContentView.swift */,
+				CD6F74C1281DFEF9007F39C2 /* ListView.swift */,
+				CD6F74C3281DFF6C007F39C2 /* Users.swift */,
+				CDE426A027E521CF00A45069 /* Assets.xcassets */,
+				CD6F74BF281DF995007F39C2 /* GoogleService-Info.plist */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CDE426A627E521CF00A45069 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDE426A527E521CF00A45069 /* KombuChat.app */,
+				CDE426B227E521CF00A45069 /* Tests iOS.xctest */,
+				CDE426BE27E521CF00A45069 /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDE426AC27E521CF00A45069 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CDE426AD27E521CF00A45069 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CDE426B527E521CF00A45069 /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CDE426B627E521CF00A45069 /* Tests_iOS.swift */,
+				CDE426B827E521CF00A45069 /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		CDE426C127E521CF00A45069 /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CDE426C227E521CF00A45069 /* Tests_macOS.swift */,
+				CDE426C427E521CF00A45069 /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDE426A427E521CF00A45069 /* KombuChat (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE426CE27E521CF00A45069 /* Build configuration list for PBXNativeTarget "KombuChat (iOS)" */;
+			buildPhases = (
+				CDE426A127E521CF00A45069 /* Sources */,
+				CDE426A227E521CF00A45069 /* Frameworks */,
+				CDE426A327E521CF00A45069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KombuChat (iOS)";
+			packageProductDependencies = (
+				CD6F74BB281DF860007F39C2 /* FirebaseAuth */,
+				CD6F74BD281DF860007F39C2 /* FirebaseFirestore */,
+			);
+			productName = "BC Connect (iOS)";
+			productReference = CDE426A527E521CF00A45069 /* KombuChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDE426B127E521CF00A45069 /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE426D427E521CF00A45069 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				CDE426AE27E521CF00A45069 /* Sources */,
+				CDE426AF27E521CF00A45069 /* Frameworks */,
+				CDE426B027E521CF00A45069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDE426B427E521CF00A45069 /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = CDE426B227E521CF00A45069 /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CDE426BD27E521CF00A45069 /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE426D727E521CF00A45069 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				CDE426BA27E521CF00A45069 /* Sources */,
+				CDE426BB27E521CF00A45069 /* Frameworks */,
+				CDE426BC27E521CF00A45069 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = CDE426BE27E521CF00A45069 /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDE4269927E521CA00A45069 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CDE426A427E521CF00A45069 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					CDE426B127E521CF00A45069 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CDE426A427E521CF00A45069;
+					};
+					CDE426BD27E521CF00A45069 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = CDE426AA27E521CF00A45069;
+					};
+				};
+			};
+			buildConfigurationList = CDE4269C27E521CA00A45069 /* Build configuration list for PBXProject "KombuChat" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDE4269827E521CA00A45069;
+			packageReferences = (
+				CD6F74BA281DF860007F39C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = CDE426A627E521CF00A45069 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDE426A427E521CF00A45069 /* KombuChat (iOS) */,
+				CDE426B127E521CF00A45069 /* Tests iOS */,
+				CDE426BD27E521CF00A45069 /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDE426A327E521CF00A45069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE426CA27E521CF00A45069 /* Assets.xcassets in Resources */,
+				CD6F74C0281DF995007F39C2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426B027E521CF00A45069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426BC27E521CF00A45069 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDE426A127E521CF00A45069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6F74C4281DFF6C007F39C2 /* Users.swift in Sources */,
+				CDE426C827E521CF00A45069 /* ContentView.swift in Sources */,
+				CDE426C627E521CF00A45069 /* KombuChat.swift in Sources */,
+				CD6F74C2281DFEF9007F39C2 /* ListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426AE27E521CF00A45069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE426B927E521CF00A45069 /* Tests_iOSLaunchTests.swift in Sources */,
+				CDE426B727E521CF00A45069 /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE426BA27E521CF00A45069 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE426C527E521CF00A45069 /* Tests_macOSLaunchTests.swift in Sources */,
+				CDE426C327E521CF00A45069 /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDE426B427E521CF00A45069 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDE426A427E521CF00A45069 /* KombuChat (iOS) */;
+			targetProxy = CDE426B327E521CF00A45069 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CDE426CC27E521CF00A45069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDE426CD27E521CF00A45069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CDE426CF27E521CF00A45069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.BC-Connect";
+				PRODUCT_NAME = KombuChat;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CDE426D027E521CF00A45069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.BC-Connect";
+				PRODUCT_NAME = KombuChat;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDE426D527E521CF00A45069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BC Connect (iOS)";
+			};
+			name = Debug;
+		};
+		CDE426D627E521CF00A45069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BC Connect (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDE426D827E521CF00A45069 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "BC Connect (macOS)";
+			};
+			name = Debug;
+		};
+		CDE426D927E521CF00A45069 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M2B72C97C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Edward.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "BC Connect (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDE4269C27E521CA00A45069 /* Build configuration list for PBXProject "KombuChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE426CC27E521CF00A45069 /* Debug */,
+				CDE426CD27E521CF00A45069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE426CE27E521CF00A45069 /* Build configuration list for PBXNativeTarget "KombuChat (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE426CF27E521CF00A45069 /* Debug */,
+				CDE426D027E521CF00A45069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE426D427E521CF00A45069 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE426D527E521CF00A45069 /* Debug */,
+				CDE426D627E521CF00A45069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE426D727E521CF00A45069 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE426D827E521CF00A45069 /* Debug */,
+				CDE426D927E521CF00A45069 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD6F74BA281DF860007F39C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD6F74BB281DF860007F39C2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6F74BA281DF860007F39C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CD6F74BD281DF860007F39C2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6F74BA281DF860007F39C2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CDE4269927E521CA00A45069 /* Project object */;
+}
