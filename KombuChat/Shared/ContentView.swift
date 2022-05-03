@@ -2,121 +2,73 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Edward Lee on 18/3/22.
+//  Created by Edward Lee on 18/3/21.
 //
 
 import SwiftUI
 import Firebase
+import SceneKit
 
 
 
 struct ContentView: View {
     @State private var username = ""
     @State private var password = ""
-    @State private var userIsLoggedIn = false
-    
+    @State private var confirmPassword = ""
+    @State var userIsLoggedIn = true
+   
     var body: some View {
-        if userIsLoggedIn {
-            ListView()
-        }else{
-            content
-        }
-    }
-    
-    var content: some View {
         ZStack{
-            Color.gray
             
-            RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .foregroundStyle(.linearGradient(colors: [.red, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
-                .frame(width: 1000, height: 600)
-                .rotationEffect(.degrees(140))
-                .offset(y: -40)
-            
-            VStack(spacing: 20){
-                Text("KombuChat")
-                    .foregroundColor(.white)
-                    .font(.system(size: 40, weight: .bold, design: .rounded))
-                    .offset(x: 0, y: -100)
-                
-                TextField("Username", text: $username)
-                    .foregroundColor(.white)
-                    .textFieldStyle(.plain)
-                    .placeholder(when: username.isEmpty){
-                        Text("Username")
-                    .foregroundColor(.white)
-                    .bold()
+            //ffs edward stop cluttering the main place, keep here simple
+            if userIsLoggedIn{
+                Login()
+                    .transition(.move(edge: .trailing))
+            } else {
+                SignUp()
+                    .transition(.move(edge: .trailing))
             }
-            
-            Rectangle()
-                .frame(width: 350, height: 1)
-                .foregroundColor(.white)
-            SecureField("Password", text: $password)
-                .foregroundColor(.white)
-                .textFieldStyle(.plain)
-                .placeholder(when: password.isEmpty){
-                    Text("Password")
-                        .foregroundColor(.white)
-                        .bold()
-                }
-            Rectangle()
-                .frame(width: 350, height: 1)
-                .foregroundColor(.white)
+            //donny has to pick one init
+        
+            HStack{
+                Text(userIsLoggedIn ? "New Member?" : "Already a memeber?")
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+            Button(action: {
+                userIsLoggedIn.toggle()
+            } ,label: {
+                Text(userIsLoggedIn ? "Sign Up" : "Log In")
+                    
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+            })
                 
-                Button{
-                    // Sign in
-                }label: {
-                  Text("Sign in")
-                        .bold()
-                        .frame(width: 200, height: 40)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(.linearGradient(colors: [.indigo], startPoint: .top, endPoint: .bottomTrailing)))
-                        .foregroundColor(.white)
-                }
-                .padding(.top)
-                .offset(y: 10)
-                
-                Button{
-                    // Sing up
-                } label: {
-                    Text("Don't have an account? Sign up.")
-                        .bold()
-                        .foregroundColor(.white)
-                }
-                .padding(.top)
-                .offset(y: 50)
-        }
-            .frame(width: 350)
-            .onAppear{
-                Auth.auth().addStateDidChangeListener{ auth, user in
-                    if user != nil {
-                        userIsLoggedIn.toggle()
-                    }
-                }
             }
+            .offset(y: 300)
+            .padding(.top)
+            .offset(y: 50)
         }
         .ignoresSafeArea()
     }
-    
-    func signUp(){
-        Auth.auth().createUser(withUsername: username, password: password)
-        {
-            result, error in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-        }
-    }
-    
-    func singIn(){
-        Auth.auth().signIn(withUsername: username, password: password)
-        { result, error in
-            if error != nil{
-                print(error!.localizedDescription)
-            }
-        }
-    }
+
+//
+//    func signUp(){
+//    Auth.auth().createUser(withEmail: username, password: password) {
+//            result, error in
+//            if error != nil {
+//                print(error!.localizedDescription)
+//            }
+//        }
+//    }
+//
+//    func singIn(){
+//        Auth.auth().signIn(withEmail: username, password: password) {
+//            result, error in
+//            if error != nil{
+//                print(error!.localizedDescription)
+//            }
+//        }
+//    }
     
     
 }
