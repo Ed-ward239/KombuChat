@@ -16,17 +16,15 @@ struct ContentView: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     @State var userIsLoggedIn = true
-   
+    
     var body: some View {
         ZStack{
             
-            //ffs edward stop cluttering the main place, keep here simple
             if userIsLoggedIn{
                 Login()
-                    .transition(.move(edge: .trailing))
+                   
             } else {
                 SignUp()
-                    .transition(.move(edge: .trailing))
             }
             //donny has to pick one init
         

@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 struct Login: View {
-    @State private var username = ""
+    @State private var email = ""
     @State private var password = ""
    
     var body: some View {
@@ -34,11 +34,11 @@ struct Login: View {
                         .font(.system(size: 40, weight: .bold, design: .rounded))
                         .offset(x: -120, y: -60)
                  
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $email)
                         .foregroundColor(.white)
                         .textFieldStyle(.plain)
-                        .placeholder(when: username.isEmpty){
-                            Text("Username")
+                        .placeholder(when: email.isEmpty){
+                            Text("Email")
                         .foregroundColor(.white)
                         .bold()
                 }

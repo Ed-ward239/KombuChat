@@ -9,15 +9,16 @@ import SwiftUI
 import Firebase
 
 struct SignUp: View {
-    @State private var username = ""
+    @State private var email = ""
     @State private var password = ""
-    @State private var confirmPassword = ""
     @State var userIsLoggedIn = true
     var body: some View {
         
         //  i like the color, we can still change it if you want to
             ZStack{
                 Color.gray
+                
+                
                 
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .foregroundStyle(.linearGradient(colors: [.red, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -37,11 +38,11 @@ struct SignUp: View {
                         .offset(x: -105, y: -50)
                     
                  
-                    TextField("Choose a Username", text: $username)
+                    TextField("Choose a Email", text: $email) //use $ for wrapping the string
                         .foregroundColor(.white)
                         .textFieldStyle(.plain)
-                        .placeholder(when: username.isEmpty){
-                            Text("Choose a Username")
+                        .placeholder(when: email.isEmpty){
+                            Text("Choose a Email")
                         .foregroundColor(.white)
                         .bold()
                 }
@@ -58,20 +59,8 @@ struct SignUp: View {
                             .bold()
                     }
                     .padding(.top,20)
-                    //need to comfirm password init
-                Rectangle()
-                    .frame(width: 350, height: 1)
-                    .foregroundColor(.white)
-                SecureField("Confirm Password", text: $confirmPassword)
-                    .foregroundColor(.white)
-                    .textFieldStyle(.plain)
-                    .placeholder(when: confirmPassword.isEmpty){
-                        Text("Confirm Password")
-                            .foregroundColor(.white)
-                            .bold()
-                    }
-                    .padding(.top,20)
-                    
+           
+           
                
                     
                 Rectangle()
@@ -80,7 +69,7 @@ struct SignUp: View {
                 
                     
                     Button{
-                        // Sign in button need to be made
+                        handleAction()
                     }label: {
                       Text("Create Account")
                             .bold()
@@ -93,16 +82,37 @@ struct SignUp: View {
                     }
                   
                     .offset(y: 10)
-                    
-                    
                     .padding(.top)
                     .offset(y: 50)
+                    
+                    // create user .unfinished
+                   
+                  
             }
+                
                 .frame(width: 350)
+                
+                
                
             }
             .ignoresSafeArea()
+        
         }
+    //calls this private function to create the user
+    private func handleAction  (){
+        createNewAccount()
+    }
+    func createNewAccount(){
+        Auth.auth().createUser(withEmail: email, password: password){
+            result, err in
+            if let err = err {
+                print("Failed to create user:", err)
+                return
+            }
+            print("Successfully created user: \(result?.user.uid ?? "")")
+        }
+    }
+    
 }
 
 struct SignUp_Previews: PreviewProvider {
