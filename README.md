@@ -30,4 +30,5 @@ still developing:
 chat interface, saving chat
 
 **Kombuchat 1.1**
+
 not released yet, stay tuned tho
