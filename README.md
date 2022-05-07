@@ -1,6 +1,6 @@
 # Kombuchat 
 CISC4800 Live Chat App
-School project that consist of 4 team members, we are using `Swift` for our user interface and Firebase for user database.
+School project that consist of 4 team members, we are using `Xcode` for our user interface and Firebase for user database.
 
 Firebase is Google's application development platform for mobile and web applications. For more information refer to this [link](https://firebase.google.com/)
 
