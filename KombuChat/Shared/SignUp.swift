@@ -8,17 +8,19 @@
 import SwiftUI
 import Firebase
 
+
+
 struct SignUp: View {
     @State private var email = ""
     @State private var password = ""
     @State var userIsLoggedIn = true
+    
+
     var body: some View {
         
         //  i like the color, we can still change it if you want to
             ZStack{
                 Color.gray
-                
-                
                 
                 RoundedRectangle(cornerRadius: 30, style: .continuous)
                     .foregroundStyle(.linearGradient(colors: [.red, .blue], startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -36,7 +38,6 @@ struct SignUp: View {
                         .foregroundColor(.white)
                         .font(.system(size: 40, weight: .bold, design: .rounded))
                         .offset(x: -105, y: -50)
-                    
                  
                     TextField("Choose a Email", text: $email) //use $ for wrapping the string
                         .foregroundColor(.white)
@@ -60,14 +61,10 @@ struct SignUp: View {
                     }
                     .padding(.top,20)
            
-           
-               
-                    
                 Rectangle()
                     .frame(width: 350, height: 1)
                     .foregroundColor(.white)
                 
-                    
                     Button{
                         handleAction()
                     }label: {
@@ -78,22 +75,18 @@ struct SignUp: View {
                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                                     .fill(.linearGradient(colors: [.indigo], startPoint: .top, endPoint: .bottomTrailing)))
                             .foregroundColor(.white)
-                            .padding(20)
+//                            .padding(20)
                     }
-                  
-                    .offset(y: 10)
-                    .padding(.top)
-                    .offset(y: 50)
+                    Text(self.loginMessage)
+                    // if the account is created succesfully it will show the User UID
+                        .foregroundColor(.white)
+//                    .offset(y: 10)
+//                    .padding(.top)
+//                    .offset(y: 50)
                     
-                    // create user .unfinished
-                   
-                  
+                    // create user .unfinished!!
             }
-                
                 .frame(width: 350)
-                
-                
-               
             }
             .ignoresSafeArea()
         
@@ -102,17 +95,23 @@ struct SignUp: View {
     private func handleAction  (){
         createNewAccount()
     }
+    //in case it cannot create account
+    @State var loginMessage = ""
+    
+    // still needs to catch the sign in error
     func createNewAccount(){
-        Auth.auth().createUser(withEmail: email, password: password){
+        firebaseManager.shared.auth.createUser(withEmail: email, password: password){
             result, err in
             if let err = err {
                 print("Failed to create user:", err)
+                self.loginMessage = "Failed to create account \(err)"
                 return
             }
             print("Successfully created user: \(result?.user.uid ?? "")")
+            
+            self.loginMessage = "Successfully created user: \(result?.user.uid ?? "")"
         }
     }
-    
 }
 
 struct SignUp_Previews: PreviewProvider {

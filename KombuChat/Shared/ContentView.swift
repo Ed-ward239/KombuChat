@@ -2,15 +2,27 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by Edward Lee on 18/3/21.
+//  Original copy
 //
 
 import SwiftUI
 import Firebase
 import SceneKit
 
-
-
+//fixing preview crash
+class firebaseManager: NSObject{
+    let auth: Auth
+    
+    static let shared = firebaseManager() //singleton object
+    
+    override init() {
+        FirebaseApp.configure()
+        
+        self.auth = Auth.auth()
+        
+        super.init()
+    }
+}
 struct ContentView: View {
     @State private var username = ""
     @State private var password = ""
@@ -26,7 +38,6 @@ struct ContentView: View {
             } else {
                 SignUp()
             }
-            //donny has to pick one init
         
             HStack{
                 Text(userIsLoggedIn ? "New Member?" : "Already a memeber?")
@@ -40,7 +51,6 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
             })
-                
             }
             .offset(y: 300)
             .padding(.top)
@@ -48,27 +58,6 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
     }
-
-//
-//    func signUp(){
-//    Auth.auth().createUser(withEmail: username, password: password) {
-//            result, error in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            }
-//        }
-//    }
-//
-//    func singIn(){
-//        Auth.auth().signIn(withEmail: username, password: password) {
-//            result, error in
-//            if error != nil{
-//                print(error!.localizedDescription)
-//            }
-//        }
-//    }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
